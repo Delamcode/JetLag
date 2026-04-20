@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html dir="auto">
+
+<head>
+    <title>Questions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+@charset "utf-8";
+
+:root {
+    --main-bg-color: rgba(255, 255, 255, 0.952);
+    --main-color: black;
+    --alternate-bg-color: #f6f6f6;
+    --alternate-color: #222222;
+    --main-border-color: #BBBBBB;
+    --link-color: #627EC9;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #111111;
+        --main-color: #eeeeee;
+        --alternate-bg-color: #333333;
+        --alternate-color: #cccccc;
+        --main-border-color: #515151;
+        --link-color: #627EC9;
+    }
+}
+
+html {
+    font-size: 100%;
+    font-family: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+    line-height: 1.4;
+}
+
+body {
+    margin: 0;
+    padding: 1em;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+@media (max-device-width: 480px) {}
+
+@media (min-device-width: 481px) {
+    body {
+        margin: auto;
+        max-width: 600px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 1.5em 1.5em;
+    padding: .5em 1em;
+    border-left: 2px solid var(--main-border-color);
+    background-color: var(--alternate-bg-color);
+    color: var(--alternate-color);
+    border-radius: 3px;
+}
+
+blockquote p:first-child {
+    margin-top: .25em;
+}
+
+blockquote p:last-child {
+    margin-bottom: .25em;
+}
+
+hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--main-border-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+pre {
+    display: block;
+    overflow: scroll;
+    max-width: 100%;
+    background-color: var(--alternate-bg-color);
+    padding: .5em 1em;
+    margin: 1em 0;
+    border: 1px dotted var(--main-border-color);
+    border-radius: 3px;
+}
+
+code {
+    background-color: var(--alternate-bg-color);
+    color: var(--alternate-color);
+    font-family: Menlo, Courier, sans-serif;
+    font-size: .85em;
+    padding: 2px 3px;
+    border: 1px dotted var(--main-border-color);
+    border-radius: 3px;
+}
+
+pre>code {
+    border: none;
+}
+
+table {
+    margin: 1.5em 0;
+    border: 1px solid var(--main-border-color);
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: 500;
+    padding: .25em .5em;
+    background: var(--alternate-bg-color);
+    border: 1px solid var(--main-border-color);
+}
+
+td {
+    padding: .25em .5em;
+    border: 1px solid var(--main-border-color);
+}
+
+img {
+    max-width: 100%;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Questions</h1>
+
+<p>Questions can be asked at any time, as long as the previous question has been answered. We ask hiders to make a good faith effort to answer all questions in the allotted time, however, if questions are not answered in the allowed time window, the <strong>hider&#8217;s time is paused until the question is answered, and the hider will recieve no cards in exchange for answering</strong>.</p>
+
+<p>Once a question has been asked, it cannot be asked again unless the seekers choose to <strong>pay its cost twice<sup>1</sup></strong>. <strong>Vetoed questions cannot be reasked.</strong></p>
+
+<p>As you gather information about the hider&#8217;s location, you can use the internet for research to develop your theories. You may not use Google Street View or similar. You may not intentionally search for images of specific location (if an image appears while doing general research, it is fair game, however, you may not swipe through images, etc.)</p>
+
+<p>Anywhere with 5 or more Google Reviews is assumed to be legitimate, unless all players can agree otherwise. Anywhere with fewer than 5 Google Reviews is assumed to be illegitimate, unless all players can agree otherwise.</p>
+
+<p>In general, it is the responsibility of the seekers to clarify any ambiguity in what they are asking – for example, by sending a screenshot of everything they understand to qualify as an amusement park when asking if the hider is near one.</p>
+
+<p>In order to measure a distance, hold down anywhere on Google Maps that is not a formally listed location. A pin will pop up and if you scroll down you can select &#8220;measure distance,&#8221; then drag to measure from that point<sup>2</sup>.</p>
+
+<h2>Matching Questions</h2>
+
+<p>Format: <strong>“Is your nearest XYZ the same as my XYZ?”</strong></p>
+
+<p>Valid answers: <strong>yes or no<sup>3</sup></strong></p>
+
+<p>Hiders have <strong>five minutes</strong> to answer.</p>
+
+<p>Reward: <strong>draw 3 cards, keep 1</strong></p>
+
+<p><em>If locations are not within a map&#8217;s boundaries, players must operate as if they do not exist.</em></p>
+
+<h3>Transit</h3>
+
+<h4>Transit Line</h4>
+
+<p><em>Important: In order to ask this question, seekers must be on the form of transit, and it must be moving.</em></p>
+
+<p>The answer is yes if the transit the seekers are currently riding would stop at the hider&#8217;s station. For clarity, best practice is for seekers to screenshot all the stations their transit would stop at and send them to the hider<sup>4</sup>.</p>
+
+<h4>Station Name&#8217;s Length</h4>
+
+<p>Number of characters (hyphens and spaces count) in the station, as defined by Google Maps, if the app includes the word &#8220;station,&#8221; that counts.</p>
+
+<p>When answering the station name length matching question, you must also state if your station name is longer or shorter than theirs.</p>
+
+<h4>Street or Path</h4>
+
+<p>A street or path is considered to have ended when it aquires a different name. This includes changing from, say, &#8220;Jet Lag St. East&#8221; to &#8220;Jet Lag St. West&#8221;</p>
+
+<p>If a street or path is unnamed, it is considered to start or end wherever it has an intersection.</p>
+
+<h3>Administrative Divisions</h3>
+
+<h4>Naselja</h4>
+
+<p>Pick from: <em>Besnica, Brezje pri Lipoglavu, Dolgo Brdo, Dvor, Češnjica, Črna vas, Gabrje pri Jančah, Gunclje, Janče, Javor, Lipe, Ljubljana, Mali Lipoglav, Mali Vrh pri Prežganju, Malo Trebeljevo, Medno, Pance, Podgrad, Podlipoglav, Podmolnik, Prežganje, Ravno Brdo, Rašica, Repče, Sadinja vas, Selo pri Pancah, Spodnje Gameljne, Srednje Gameljne, Stanežiče, Šentpavel, Toško Čelo, Tuji Grm, Veliki Lipoglav, Veliko Trebeljevo, Vnajnarje, Volavlje, Zagradišče, Zgornja Besnica, Zgornje Gameljne<sup>5</sup></em>.</p>
+
+<h4>Četrtne skupnosti</h4>
+
+<p>Pick from: <em>Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič<sup>6</sup></em>.</p>
+
+<h3>Natural</h3>
+
+<h4>Park</h4>
+
+<p>Anything correctly classified as a park by Google Maps, generally including a tree icon.</p>
+
+<h3>Places of Interest</h3>
+
+<h4>Museum</h4>
+
+<p>Anything correctly categorized as a museum by Google Maps.</p>
+
+<h4>Movie Theater</h4>
+
+<p>Anything correctly categorized as a movie theater by Google Maps.</p>
+
+<h4>Library</h4>
+
+<p>Libraries marked on <a href="https://www.mklj.si/knjiznica/">mklj</a>.</p>
+
+<h4>Embassy</h4>
+
+<p>Anything correctly categorized as an embassy by Google Maps.</p>
+
+<h4>Police Station</h4>
+
+<p>Police stations marked on <a href="https://zemljevid.ljubljana.si">zemljevid.ljubljana.si</a>.</p>
+
+<h2>Measuring Questions</h2>
+
+<p>Format: <strong>”Compared to me, are you closer to or further from XYZ?”</strong> This question must include their distance.</p>
+
+<p>Valid answers: <strong>closer or further<sup>3</sup></strong></p>
+
+<p>Hiders have <strong>five minutes</strong> to answer.</p>
+
+<p>Reward: <strong>draw 3 cards, keep 1</strong></p>
+
+<h3>Transit</h3>
+
+<h4>Commercial Airport</h4>
+
+<p>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via Google Flights (flights.google.com).</p>
+
+<h4>Rail Station</h4>
+
+<p>Pick from: Polje, Zalog, Vodmat, Črnuče, Ljubljana, Trzin, Brinje, Ježica, Rakovnik.</p>
+
+<h3>Borders</h3>
+
+<h4>Četrtne skupnosti</h4>
+
+<p>Pick from: <em>Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič<sup>6</sup></em>.</p>
+
+<h3>Natural</h3>
+
+<h4>Sea Level</h4>
+
+<p>This refers to a player&#8217;s altitude. Valid answers are higher or lower.</p>
+
+<p>You can find this using your phone&#8217;s compass. Fair warning: sometimes the compass is wrong, so don&#8217;t rely too heavily on this being 100% accurate.</p>
+
+<h4>Body of Water</h4>
+
+<p>Any named body of water on Google Maps, including rivers, excluding pools.</p>
+
+<h4>Park</h4>
+
+<p>Anything correctly classified as a park by Google Maps, generally including a tree icon.</p>
+
+<h4>Forest</h4>
+
+<p>Forests marked on <a href="https://zemljevid.ljubljana.si">zemljevid.ljubljana.si</a>. Being inside of a forest is defined as being zero meters away from it, otherwise closest border is used.</p>
+
+<h3>Places of Interest</h3>
+
+<h4>Museum</h4>
+
+<p>Anything correctly categorized as a museum by Google Maps.</p>
+
+<h3>Movie Theater</h3>
+
+<p>Anything correctly categorized as a movie theater by Google Maps.</p>
+
+<h2>Radar Questions</h2>
+
+<p>Format: <strong>”Are you within XYZ of me?”</strong> This question must include their current location<sup>6</sup>.</p>
+
+<p>Valid answers: <strong>yes or no<sup>3</sup></strong></p>
+
+<p>Hiders have <strong>five minutes</strong> to answer.</p>
+
+<p>Reward: <strong>draw 2 cards, keep 1</strong></p>
+
+<p><em>Note that GPS is not always completely accurate.</em></p>
+
+<p>Pick from: 400m, 800m, 2km, 5km, Choose</p>
+
+<h2>Thermometer Questions</h2>
+
+<p>Format: <strong>”After traveling XYZ, am I hotter or colder<sup>8</sup>?”</strong></p>
+
+<p>Valid answers: <strong>hotter or colder<sup>3</sup></strong></p>
+
+<p>Hiders have <strong>five minutes</strong> to answer.</p>
+
+<p>Reward: <strong>draw 2 cards, keep 1</strong></p>
+
+<p><em>If you randomize a thermometer, the seekers may be unable or unwilling to do the new thermometer. In this case, the new thermometer isn&#8217;t considered asked, but you still get to draw the cards.</em></p>
+
+<p>Pick from: (small) 800m, 5km.</p>
+
+<h2>Photo Questions</h2>
+
+<p>Format: <strong>”Send me a photo of XYZ.”</strong></p>
+
+<p>Valid answers: <strong>a photo that meets the full specifications of the photo question<sup>9</sup></strong></p>
+
+<p>Hiders have <strong>ten minutes</strong> to answer.</p>
+
+<p>Reward: <strong>draw 1 card, keep 1</strong></p>
+
+<p>You are allowed to censor any text in photos you send the seekers.</p>
+
+<p>All photos must be sent in your phone&#8217;s normal aspect ratio.</p>
+
+<p>If you are asked a photo question, and the seekers arrive in your hiding zone within 10 minutes of you taking the photo, you can pause the game until you are done taking the photo and can reposition to your intended final hiding spot. During a pause, the seekers can&#8217;t move and the hide time clock is paused. This is to prevent the seekers from using a photo question to trap you in a suboptimal final hiding spot.</p>
+
+<h3>Any Building Visible from Transit Station</h3>
+
+<p>Must stand directly outside a station entrance. If there are multiple entrances, you may choose. Must include roof and both sides, with the top of the building in the top ⅓ of the frame. The building may not be the transit station itself.</p>
+
+<h3>Widest Street</h3>
+
+<p>Must include both sides of the street; does not have to include background.</p>
+
+<h3>Tree</h3>
+
+<p>Must include the entire tree. This may be any tree.</p>
+
+<h3>Tallest Structure in Your Current Sightline</h3>
+
+<p>Must include top and both sides. The top must be in the top ⅓ of the frame<sup>9</sup>.</p>
+
+<h3>You</h3>
+
+<p>Selfie mode. Phone perpendicular to ground, arm fully extended, using your phone&#8217;s default lens with no zoom.</p>
+
+<h3>The Sky</h3>
+
+<p>Place phone on ground, shoot directly up using your phone&#8217;s default lens with no zoom.</p>
+
+<h3>Trace Any Street/Path(s)</h3>
+
+<p>Street/path(s) must be visible on mapping app. All streets/paths must be continuous. Send north-south oriented. It must be at least <strong>800 meters</strong> long<sup>11</sup>.</p>
+
+<h3>2 Buildings</h3>
+
+<p>Must include bottom and up to four stories.</p>
+
+<h3>Restaurant Interior</h3>
+
+<p>No zoom. Must take the picture through the window from outside the restaurant.</p>
+
+<h2>Footnotes</h2>
+
+<ol>
+<li>So, for example, a question that would typically allow a hider to draw 3 cards and keep 1 would now allow a hider to draw 3, keep 1, then draw 3, and keep 1 again (importanty: hiders cannot draw 6 and keep 2, they must draw 3 and pull 1 two seperate times, in this example.) Should seekers want to ask a question a third time, its cost would be triple; a fourth time, the cost quadrupled, and so on.</li>
+<li>There&#8217;s a possibility that measuring to the map icon can lead to strange outcomes – for example, if you are in a very large park but far from the center, you may be several miles from that park&#8217;s map icon. You might be closer to the icon of a smaller, nearby park. This could mean that you are forced to say that your nearest park is the small one even though you are literally in the bigger park. Nonetheless, measuring to the map icon is the best, most objective way to handle these questions.</li>
+<li>If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer.</li>
+<li>If the seekers are on a limited-stop/express train that passes through the hider&#8217;s station but does not stop at it, the hider should answer &#8220;no&#8221;. A &#8220;yes&#8221; answer is only given when the seekers' train would stop at the hider&#8217;s station.</li>
+<li>If unclear, use <a href="https://zemljevid.ljubljana.si">zemljevid.ljubljana.si</a>.</li>
+<li>If unclear, use this map: <a href="https://commons.wikimedia.org/wiki/File:MOL-CS.png">wikimedia image</a>.</li>
+<li>Note that radars are asking about your location, not your hiding zone. If the radar would encompass part of your hiding zone, but not your location at the time of answering, it would be a miss. You may move back to the excluded region of your hiding zone before the end game.</li>
+<li>When starting a thermometer question, you should inform the hider that you are starting a thermometer and send them your current location. Then, after traveling a sufficient distance – measured as the crow flies – send them your new location. If the new location is closer to the hider&#8217;s current location, then you are hotter. Otherwise, you are colder.</li>
+<li>In situations where the subject of the photograph doesn&#8217;t exist in the hiding zone or is impossible to answer because the hider cannot move (during the end game), a valid answer is <strong>null</strong>.</li>
+<li>This is the tallest building from your perspective, not the objectively tallest building. If you can see the Burj Khalifa miles and miles away, but a nearby apartment building is taller from your perspective/sightline, you would send the apartment building.</li>
+<li>This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone&#8217;s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker.</li>
+</ol>
+</body>
+
+</html>
