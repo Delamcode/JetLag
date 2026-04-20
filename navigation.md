@@ -2,7 +2,7 @@
 
 [gimmick:theme](readable)
 
-[Rules](#!rules.md)
+[Rules](#!)
 
 [Questions](#!questions.md)
 
