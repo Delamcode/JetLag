@@ -10,7 +10,8 @@
       "valid_answers": ["yes", "no"],
       "time_limit_minutes": 5,
       "notes": [
-        "If locations are not within a map's boundaries, players must operate as if they do not exist."
+        "If locations are not within a map's boundaries, players must operate as if they do not exist.",
+        "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer."
       ],
       "questions": [
         {
@@ -79,6 +80,9 @@
       "format": "Compared to me, are you closer to or further from XYZ? (must include your distance)",
       "valid_answers": ["closer", "further"],
       "time_limit_minutes": 5,
+      "notes": [
+        "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer."
+      ]
       "questions": [
         {
           "title": "Commercial Airport",
@@ -137,7 +141,9 @@
       "valid_answers": ["yes", "no"],
       "time_limit_minutes": 5,
       "notes": [
-        "Note that GPS is not always completely accurate."
+        "GPS is not always completely accurate.",
+        "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer.",
+        "Radars ask about your location, not your hiding zone. If the radar would encompass part of your hiding zone, but not your location at the time of answering, it would be a miss. You may move back to the excluded region of your hiding zone before the end game."
       ],
       "questions": [
         {
@@ -182,7 +188,9 @@
       "valid_answers": ["hotter", "colder"],
       "time_limit_minutes": 5,
       "notes": [
-        "If you randomize a thermometer, the seekers may be unable or unwilling to do the new thermometer. In this case, the new thermometer isn't considered asked, but you still get to draw the cards."
+        "If you randomize a thermometer, the seekers may be unable or unwilling to do the new thermometer. In this case, the new thermometer isn't considered asked, but you still get to draw the cards.",
+        "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer.",
+        "When starting a thermometer question, you should inform the hider that you are starting a thermometer and send them your current location. Then, after traveling a sufficient distance – measured as the crow flies – send them your new location. If the new location is closer to the hider’s current location, then you are hotter. Otherwise, you are colder."
       ],
       "questions": [
         {
@@ -211,7 +219,8 @@
       "notes": [
         "You are allowed to censor any text in photos you send the seekers.",
         "All photos must be sent in your phone's normal aspect ratio.",
-        "If you are asked a photo question and the seekers arrive in your hiding zone within 10 minutes of you taking the photo, you can pause the game until you are done taking the photo and can reposition to your intended final hiding spot. During a pause, the seekers can't move and the hide time clock is paused."
+        "If you are asked a photo question and the seekers arrive in your hiding zone within 10 minutes of you taking the photo, you can pause the game until you are done taking the photo and can reposition to your intended final hiding spot. During a pause, the seekers can't move and the hide time clock is paused.",
+        "In situations where the subject of the photograph doesn’t exist in the hiding zone or is impossible to answer because the hider cannot move (during the end game), a valid answer is null."
       ],
       "questions": [
         {
@@ -232,7 +241,7 @@
         {
           "title": "Tallest Structure in Sightline",
           "icon": "icons/skyscraper.svg",
-          "description": "Send a photo of the tallest structure in your current sightline.<br><br>Must include the top and both sides. The top must be in the top ⅓ of the frame."
+          "description": "Send a photo of the tallest structure in your current sightline.<br><br>Must include the top and both sides. The top must be in the top ⅓ of the frame. <br><br>This is the tallest building from your perspective, not the objectively tallest building. If you can see the Burj Khalifa miles and miles away, but a nearby apartment building is taller from your perspective/sightline, you would send the apartment building."
         },
         {
           "title": "You",
@@ -247,7 +256,7 @@
         {
           "title": "Trace Any Street/Path(s)",
           "icon": "icons/street.svg",
-          "description": "Send a photo tracing any street or path(s).<br><br>Street/path(s) must be visible on a mapping app. All streets/paths must be continuous. Send north-south oriented. Must be at least 800 meters long."
+          "description": "Send a photo tracing any street or path(s).<br><br>Street/path(s) must be visible on a mapping app. All streets/paths must be continuous. Send north-south oriented. Must be at least 800 meters long. <br><br>This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone’s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker."
         },
         {
           "title": "2 Buildings",
