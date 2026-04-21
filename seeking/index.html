@@ -34,11 +34,6 @@
             padding: 20px;
         }
 
-        /* 
-            Desktop:   as many categories per row as fit (each sized by content)
-            Tablet:    2 categories per row
-            Mobile:    1 category per row (full width)
-        */
         .categories-wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
@@ -65,6 +60,18 @@
             gap: 12px;
             padding-bottom: 10px;
             border-bottom: 3px solid var(--cat-color);
+            cursor: pointer;
+            border-radius: 4px;
+            transition: filter 0.15s ease;
+            user-select: none;
+        }
+
+        .category-header:hover {
+            filter: brightness(1.15);
+        }
+
+        .category-header:active {
+            filter: brightness(0.9);
         }
 
         .category-icon-wrapper {
@@ -107,28 +114,27 @@
         }
 
         /* ── Questions grid ── */
-        /*
-            The grid uses a fixed button size so the grid width is always
-            exactly (columns × button + gaps), matching the header width.
-
-            --btn-size drives everything so one variable controls the scale.
-        */
         .questions-grid {
             --btn-size: 55px;
             --grid-gap: 5px;
-
             display: grid;
             gap: var(--grid-gap);
             /*
-                grid-template-columns is set inline via the style attribute
-                as: repeat({columns}, var(--btn-size))
-                This comes directly from JSON so it is always correct.
+                Desktop: grid-template-columns set inline from JSON columns value,
+                e.g. repeat(5, var(--btn-size))
+                This makes the grid exactly as wide as the buttons need to be.
             */
         }
 
+        /*
+            Buttons are always square via aspect-ratio: 1.
+            width: 100% fills the grid cell.
+            The grid cell width is always --btn-size, so the button is always
+            --btn-size × --btn-size regardless of screen size.
+        */
         .question-btn {
-            width: var(--btn-size, 55px);
-            height: var(--btn-size, 55px);
+            width: 100%;
+            aspect-ratio: 1;
             border: none;
             border-radius: 6px;
             cursor: pointer;
@@ -150,9 +156,13 @@
             transform: scale(0.96);
         }
 
+        /*
+            Image sized as percentage of the button — stays correct
+            as the button scales without any calc() needed.
+        */
         .question-btn img {
-            width: calc(var(--btn-size, 55px) * 0.58);
-            height: calc(var(--btn-size, 55px) * 0.58);
+            width: 58%;
+            height: 58%;
             object-fit: contain;
             filter: brightness(0) invert(1);
         }
@@ -168,30 +178,18 @@
         }
 
         /*
-            On mobile the category takes full width.
-            We scale the button grid to fill that width by reducing --btn-size
-            so we never overflow or leave awkward gaps.
+            On mobile the category is full width, so we let auto-fill
+            pack as many fixed-size buttons as fit, with the remainder
+            becoming gap — never stretching buttons into rectangles.
         */
         @media (max-width: 640px) {
             .questions-grid {
-                /*
-                    auto-fill with a minimum of 44px lets the grid decide how
-                    many columns actually fit in the available width, which is
-                    full-width minus padding. The buttons grow via 1fr to fill
-                    the row evenly. This means on a wide phone you may still
-                    see multiple columns — which is correct.
-                */
-                grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)) !important;
-                --btn-size: clamp(44px, 13vw, 55px);
-            }
-
-            .question-btn {
-                width: 100%;
-                height: var(--btn-size);
+                grid-template-columns: repeat(auto-fill, var(--btn-size)) !important;
+                justify-content: start;
             }
         }
 
-        /* ── Modal ── */
+        /* ── Shared modal base ── */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -211,10 +209,11 @@
         .modal {
             background: white;
             border-radius: 12px;
-            max-width: 420px;
+            max-width: 480px;
             width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-            overflow: hidden;
             animation: popIn 0.2s ease;
         }
 
@@ -228,6 +227,11 @@
             display: flex;
             align-items: center;
             gap: 14px;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1;
+            border-radius: 12px 12px 0 0;
         }
 
         .modal-icon {
@@ -251,7 +255,7 @@
             flex: 1;
         }
 
-        .modal-category {
+        .modal-eyebrow {
             font-size: 0.75rem;
             font-weight: 700;
             letter-spacing: 2px;
@@ -260,11 +264,12 @@
             margin-bottom: 4px;
         }
 
-        .modal-question-title {
-            font-size: 1.05rem;
-            font-weight: 800;
+        .modal-main-title {
+            font-size: 1.15rem;
+            font-weight: 900;
             color: #222;
             line-height: 1.3;
+            letter-spacing: 0.5px;
         }
 
         .modal-body {
@@ -273,7 +278,7 @@
 
         .modal-divider {
             height: 2px;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             border-radius: 1px;
         }
 
@@ -281,6 +286,83 @@
             font-size: 0.92rem;
             color: #444;
             line-height: 1.6;
+        }
+
+        /* Category modal: structured info rows */
+        .info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .info-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-label {
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #aaa;
+        }
+
+        .info-value {
+            font-size: 0.92rem;
+            color: #333;
+            line-height: 1.55;
+        }
+
+        .info-value.mono {
+            font-family: 'Courier New', monospace;
+            background: #f4f4f4;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 0.88rem;
+            color: #222;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 2px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .notes-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 2px;
+        }
+
+        .notes-list li {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.55;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .notes-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #bbb;
+            font-weight: 900;
         }
 
         .modal-close {
@@ -326,21 +408,20 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal">
-        <div class="modal-header">
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal" id="modal">
+        <div class="modal-header" id="modal-header">
             <div class="modal-icon" id="modal-icon">
                 <img id="modal-icon-img" src="" alt="">
             </div>
             <div class="modal-title-block">
-                <div class="modal-category" id="modal-category-label"></div>
-                <div class="modal-question-title" id="modal-title"></div>
+                <div class="modal-eyebrow" id="modal-eyebrow"></div>
+                <div class="modal-main-title" id="modal-main-title"></div>
             </div>
         </div>
         <div class="modal-body">
             <div class="modal-divider" id="modal-divider"></div>
-            <div class="modal-description" id="modal-description"></div>
+            <div id="modal-content"></div>
             <button class="modal-close" id="modal-close-btn" onclick="closeModal()">CLOSE</button>
         </div>
     </div>
@@ -376,9 +457,11 @@
         col.className = 'category-column';
         col.style.setProperty('--cat-color', color);
 
-        // ── Header ──────────────────────────────────────────────────────────
         const header = document.createElement('div');
         header.className = 'category-header';
+        header.setAttribute('role', 'button');
+        header.setAttribute('tabindex', '0');
+        header.setAttribute('aria-label', `${cat.name} category info`);
 
         const iconWrap = document.createElement('div');
         iconWrap.className = 'category-icon-wrapper';
@@ -387,6 +470,7 @@
             const img = document.createElement('img');
             img.src = cat.icon;
             img.alt = cat.name || '';
+            img.onerror = () => img.remove();
             iconWrap.appendChild(img);
         }
 
@@ -403,15 +487,19 @@
 
         info.append(nameEl, rewardEl);
         header.append(iconWrap, info);
+
+        header.addEventListener('click', () => openCategoryModal(cat, color));
+        header.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openCategoryModal(cat, color);
+            }
+        });
+
         col.appendChild(header);
 
-        // ── Grid ────────────────────────────────────────────────────────────
         const grid = document.createElement('div');
         grid.className = 'questions-grid';
-        /*
-            Set the desktop column layout directly from JSON.
-            On mobile the media query overrides this with auto-fill.
-        */
         grid.style.gridTemplateColumns = `repeat(${columns}, var(--btn-size, 55px))`;
 
         (cat.questions || []).forEach(q => grid.appendChild(buildButton(q, cat, color)));
@@ -440,33 +528,135 @@
             btn.appendChild(span);
         }
 
-        btn.addEventListener('click', () => openModal(q, cat, color));
+        btn.addEventListener('click', () => openQuestionModal(q, cat, color));
         return btn;
     }
 
-    // ── Modal ────────────────────────────────────────────────────────────────
-    function openModal(q, cat, color) {
-        const iconEl  = document.getElementById('modal-icon');
+    // ── Modal helpers ─────────────────────────────────────────────────────────
+    function applyModalChrome(color, iconSrc, iconAlt, eyebrow, title) {
+        document.getElementById('modal-icon').style.backgroundColor  = color;
+        document.getElementById('modal-divider').style.backgroundColor = color;
+        document.getElementById('modal-close-btn').style.backgroundColor = color;
+
         const iconImg = document.getElementById('modal-icon-img');
-
-        iconEl.style.backgroundColor = color;
-
-        if (q.icon) {
-            iconImg.src = q.icon;
-            iconImg.alt = q.title || q.name || '';
+        if (iconSrc) {
+            iconImg.src = iconSrc;
+            iconImg.alt = iconAlt || '';
             iconImg.style.display = 'block';
         } else {
             iconImg.style.display = 'none';
         }
 
-        document.getElementById('modal-category-label').textContent          = (cat.name || '').toUpperCase();
-        document.getElementById('modal-title').textContent                    = q.title || q.name || '';
-        document.getElementById('modal-divider').style.backgroundColor        = color;
-        document.getElementById('modal-description').innerHTML                = q.description || '<em style="color:#aaa">No description available.</em>';
-        document.getElementById('modal-close-btn').style.backgroundColor      = color;
+        document.getElementById('modal-eyebrow').textContent    = eyebrow;
+        document.getElementById('modal-main-title').textContent = title;
+    }
 
+    function showModal() {
         document.getElementById('modal-overlay').classList.add('active');
         document.body.style.overflow = 'hidden';
+    }
+
+    function openCategoryModal(cat, color) {
+        applyModalChrome(
+            color,
+            cat.icon || '',
+            cat.name || '',
+            'Category Info',
+            (cat.name || '').toUpperCase()
+        );
+
+        const content = document.getElementById('modal-content');
+        content.innerHTML = '';
+
+        const grid = document.createElement('div');
+        grid.className = 'info-grid';
+
+        if (cat.reward) {
+            grid.appendChild(makeInfoRow('Reward', cat.reward));
+        }
+
+        if (cat.format) {
+            const val = document.createElement('div');
+            val.className = 'info-value mono';
+            val.textContent = cat.format;
+            grid.appendChild(makeInfoRow('Format', null, val));
+        }
+
+        if (cat.valid_answers && cat.valid_answers.length) {
+            const badgeList = document.createElement('div');
+            badgeList.className = 'badge-list';
+            cat.valid_answers.forEach(answer => {
+                const badge = document.createElement('span');
+                badge.className = 'badge';
+                badge.style.backgroundColor = color;
+                badge.textContent = answer.toUpperCase();
+                badgeList.appendChild(badge);
+            });
+            grid.appendChild(makeInfoRow('Valid Answers', null, badgeList));
+        }
+
+        if (cat.time_limit_minutes != null) {
+            grid.appendChild(makeInfoRow(
+                'Time Limit',
+                `${cat.time_limit_minutes} minute${cat.time_limit_minutes !== 1 ? 's' : ''}`
+            ));
+        }
+
+        if (cat.notes && cat.notes.length) {
+            const ul = document.createElement('ul');
+            ul.className = 'notes-list';
+            cat.notes.forEach(note => {
+                const li = document.createElement('li');
+                li.textContent = note;
+                ul.appendChild(li);
+            });
+            grid.appendChild(makeInfoRow('Notes', null, ul));
+        }
+
+        content.appendChild(grid);
+        showModal();
+    }
+
+    function openQuestionModal(q, cat, color) {
+        applyModalChrome(
+            color,
+            q.icon  || '',
+            q.title || q.name || '',
+            (cat.name || '').toUpperCase(),
+            q.title || q.name || ''
+        );
+
+        const content = document.getElementById('modal-content');
+        content.innerHTML = '';
+
+        const desc = document.createElement('div');
+        desc.className = 'modal-description';
+        desc.innerHTML = q.description ||
+            '<em style="color:#aaa">No description available.</em>';
+        content.appendChild(desc);
+
+        showModal();
+    }
+
+    function makeInfoRow(label, textValue, nodeValue) {
+        const row = document.createElement('div');
+        row.className = 'info-row';
+
+        const labelEl = document.createElement('div');
+        labelEl.className = 'info-label';
+        labelEl.textContent = label;
+        row.appendChild(labelEl);
+
+        if (nodeValue) {
+            row.appendChild(nodeValue);
+        } else {
+            const val = document.createElement('div');
+            val.className = 'info-value';
+            val.textContent = textValue || '';
+            row.appendChild(val);
+        }
+
+        return row;
     }
 
     function closeModal() {
