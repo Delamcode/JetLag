@@ -143,26 +143,31 @@
         {
           "title": "400m",
           "label": "400m",
+          "icon": "icons/radar.svg",
           "description": "Are you within <strong>400 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
           "title": "800m",
           "label": "800m",
+          "icon": "icons/radar.svg",
           "description": "Are you within <strong>800 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
           "title": "2km",
           "label": "2km",
+          "icon": "icons/radar.svg",
           "description": "Are you within <strong>2 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
           "title": "5km",
           "label": "5km",
+          "icon": "icons/radar.svg",
           "description": "Are you within <strong>5 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
-          "title": "Choose",
-          "label": "Choose",
+          "title": "???",
+          "label": "???",
+          "icon": "icons/radar.svg",
           "description": "The hider chooses any distance for the radar question.<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         }
       ]
@@ -183,11 +188,13 @@
         {
           "title": "800m",
           "label": "800m",
+          "icon": "icons/thermometer.svg",
           "description": "After traveling <strong>800 meters</strong>, am I hotter or colder?"
         },
         {
           "title": "5km",
           "label": "5km",
+          "icon": "icons/thermometer.svg",
           "description": "After traveling <strong>5 kilometers</strong>, am I hotter or colder?"
         }
       ]
