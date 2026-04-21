@@ -159,31 +159,31 @@
           "title":"400m",
           "label":"400m",
           "icon":"icons/radar.svg",
-          "description":"Are you within <strong>400 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "description":"Are you within <strong>400 meters</strong> of me?"
         },
         {
           "title":"800m",
           "label":"800m",
           "icon":"icons/radar.svg",
-          "description":"Are you within <strong>800 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "description":"Are you within <strong>800 meters</strong> of me?"
         },
         {
           "title":"2km",
           "label":"2km",
           "icon":"icons/radar.svg",
-          "description":"Are you within <strong>2 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "description":"Are you within <strong>2 kilometers</strong> of me?"
         },
         {
           "title":"5km",
           "label":"5km",
           "icon":"icons/radar.svg",
-          "description":"Are you within <strong>5 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "description":"Are you within <strong>5 kilometers</strong> of me?"
         },
         {
           "title":"???",
           "label":"???",
           "icon":"icons/radar.svg",
-          "description":"The seeker chooses any distance for the radar question.<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "description":"The seeker chooses any distance for the radar question."
         }
       ]
     },
