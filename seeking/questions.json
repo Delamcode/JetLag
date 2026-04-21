@@ -5,7 +5,7 @@
       "reward": "Draw 3, Pick 1",
       "color": "#2c3e50",
       "columns": 4,
-      "icon": "icons/matching.png",
+      "icon": "icons/matching.svg",
       "format": "Is your nearest XYZ the same as my XYZ?",
       "valid_answers": ["yes", "no"],
       "time_limit_minutes": 5,
