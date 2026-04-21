@@ -168,7 +168,7 @@
           "title": "???",
           "label": "???",
           "icon": "icons/radar.svg",
-          "description": "The hider chooses any distance for the radar question.<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "description": "The seeker chooses any distance for the radar question.<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         }
       ]
     },
