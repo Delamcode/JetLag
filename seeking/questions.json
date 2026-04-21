@@ -82,7 +82,7 @@
       "time_limit_minutes": 5,
       "notes": [
         "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer."
-      ]
+      ],
       "questions": [
         {
           "title": "Commercial Airport",
