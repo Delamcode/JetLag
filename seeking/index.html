@@ -1,275 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="../lag.webp" type="image/png" sizes="32x32">
-<title>Quick Seeking Rules</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-:root {
-  --bg: #0f172a;
-  --card: #1e293b;
-  --border: #334155;
-  --text: #f1f5f9;
-  --muted: #94a3b8;
-  --accent: #3b82f6;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8e8e8;
+            min-height: 100vh;
+        }
 
-* { box-sizing: border-box; }
+        .header {
+            background-color: #c0392b;
+            padding: 18px 20px;
+            text-align: center;
+        }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-}
+        .header h1 {
+            color: white;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
 
-header {
-  padding: 1.2rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.2rem;
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-}
+        .main-content {
+            padding: 20px;
+        }
 
-main {
-  padding: 1rem;
-  max-width: 720px;
-  margin: auto;
-}
+        /* 
+            Desktop:   as many categories per row as fit (each sized by content)
+            Tablet:    2 categories per row
+            Mobile:    1 category per row (full width)
+        */
+        .categories-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+            justify-content: center;
+            gap: 24px;
+        }
 
-section {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
+        @media (max-width: 640px) {
+            .categories-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
 
-h2 {
-  margin: 0 0 .75rem 0;
-  color: var(--accent);
-  font-size: 1rem;
-}
+        /* ── Category column ── */
+        .category-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-.option {
-  background: #0b1220;
-  border: 1px solid var(--border);
-  padding: .75rem;
-  border-radius: 10px;
-  margin-bottom: .5rem;
-  cursor: pointer;
-}
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--cat-color);
+        }
 
-.option:hover {
-  background: #111827;
-}
+        .category-icon-wrapper {
+            width: 52px;
+            height: 52px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-color: var(--cat-color);
+        }
 
-.explanation {
-  display: none;
-  font-size: .9rem;
-  color: var(--muted);
-  margin-top: .4rem;
-}
+        .category-icon-wrapper img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
 
-.option.active .explanation {
-  display: block;
-}
+        .category-info {
+            display: flex;
+            flex-direction: column;
+        }
 
-small {
-  display: block;
-  color: var(--muted);
-  font-size: .8rem;
-  margin-top: .5rem;
-}
+        .category-name {
+            font-size: 1.05rem;
+            font-weight: 900;
+            color: #222;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
 
-footer {
-  text-align: center;
-  font-size: .75rem;
-  color: var(--muted);
-  padding: 1rem;
-}
-</style>
+        .category-reward {
+            font-size: 0.72rem;
+            color: #555;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 3px;
+        }
+
+        /* ── Questions grid ── */
+        /*
+            The grid uses a fixed button size so the grid width is always
+            exactly (columns × button + gaps), matching the header width.
+
+            --btn-size drives everything so one variable controls the scale.
+        */
+        .questions-grid {
+            --btn-size: 55px;
+            --grid-gap: 5px;
+
+            display: grid;
+            gap: var(--grid-gap);
+            /*
+                grid-template-columns is set inline via the style attribute
+                as: repeat({columns}, var(--btn-size))
+                This comes directly from JSON so it is always correct.
+            */
+        }
+
+        .question-btn {
+            width: var(--btn-size, 55px);
+            height: var(--btn-size, 55px);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 6px;
+            background-color: var(--cat-color);
+            transition: transform 0.15s ease, filter 0.15s ease;
+        }
+
+        .question-btn:hover {
+            transform: scale(1.08);
+            filter: brightness(1.15);
+        }
+
+        .question-btn:active {
+            transform: scale(0.96);
+        }
+
+        .question-btn img {
+            width: calc(var(--btn-size, 55px) * 0.58);
+            height: calc(var(--btn-size, 55px) * 0.58);
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .question-btn .btn-label {
+            font-size: 0.55rem;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        /*
+            On mobile the category takes full width.
+            We scale the button grid to fill that width by reducing --btn-size
+            so we never overflow or leave awkward gaps.
+        */
+        @media (max-width: 640px) {
+            .questions-grid {
+                /*
+                    auto-fill with a minimum of 44px lets the grid decide how
+                    many columns actually fit in the available width, which is
+                    full-width minus padding. The buttons grow via 1fr to fill
+                    the row evenly. This means on a wide phone you may still
+                    see multiple columns — which is correct.
+                */
+                grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)) !important;
+                --btn-size: clamp(44px, 13vw, 55px);
+            }
+
+            .question-btn {
+                width: 100%;
+                height: var(--btn-size);
+            }
+        }
+
+        /* ── Modal ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(3px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 12px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            animation: popIn 0.2s ease;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+
+        .modal-header {
+            padding: 20px 20px 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .modal-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .modal-icon img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .modal-title-block {
+            flex: 1;
+        }
+
+        .modal-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        .modal-question-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        .modal-body {
+            padding: 0 20px 24px;
+        }
+
+        .modal-divider {
+            height: 2px;
+            margin-bottom: 16px;
+            border-radius: 1px;
+        }
+
+        .modal-description {
+            font-size: 0.92rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .modal-close {
+            display: block;
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: filter 0.15s;
+        }
+
+        .modal-close:hover {
+            filter: brightness(1.15);
+        }
+
+        .status-message {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .status-message.error {
+            color: #c0392b;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>Hide & Seek – Seeking</header>
-
-<main>
-
-<!-- MATCHING -->
-
-<section>
-<h2>Matching Questions</h2>
-<p>“Is your nearest ____ the same as my ____?”</p>
-<small>Yes / No • 5 min • Draw 3 keep 1</small>
-
-<div class="option">
-  Transit
-  <div class="explanation">
-    Transit Line (must be moving, Yes if seeker's train would stop at hider's station), 
-    Station Name Length (count spaces & hyphens, include “station” if shown in mapping app), 
-    Street/Path.
-  </div>
+<div class="header">
+    <h1>QUESTION MENU</h1>
 </div>
 
-<div class="option">
-  Administrative Divisions
-  <div class="explanation">
-    Naselja, Četrtne skupnosti from rulebook.
-  </div>
+<div class="main-content">
+    <div id="categories-container" class="categories-wrapper">
+        <div class="status-message">Loading questions…</div>
+    </div>
 </div>
 
-<div class="option">
-  Natural
-  <div class="explanation">
-    Park.
-  </div>
+<!-- Modal -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-icon" id="modal-icon">
+                <img id="modal-icon-img" src="" alt="">
+            </div>
+            <div class="modal-title-block">
+                <div class="modal-category" id="modal-category-label"></div>
+                <div class="modal-question-title" id="modal-title"></div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="modal-divider" id="modal-divider"></div>
+            <div class="modal-description" id="modal-description"></div>
+            <button class="modal-close" id="modal-close-btn" onclick="closeModal()">CLOSE</button>
+        </div>
+    </div>
 </div>
-
-<div class="option">
-  Places of Interest
-  <div class="explanation">
-    Museum, Movie Theater, Library, Embassy, Police Station.
-  </div>
-</div>
-
-</section>
-
-<!-- MEASURING -->
-
-<section>
-<h2>Measuring Questions</h2>
-<p>“Compared to me, are you closer to or further from ____?”</p>
-<small>Closer / Further • 5 min • Draw 3 keep 1</small>
-
-<div class="option">
-  Transit
-  <div class="explanation">
-    Rail Stations (Polje, Zalog, Vodmat, Črnuče, Ljubljana, Trzin, Brinje, Ježica, Rakovnik).
-  </div>
-</div>
-
-<div class="option">
-  Borders
-  <div class="explanation">
-    Distance to Četrtne skupnosti borders from rulebook.
-  </div>
-</div>
-
-<div class="option">
-  Natural
-  <div class="explanation">
-    Sea Level, Body of Water, Park, Forest.
-  </div>
-</div>
-
-<div class="option">
-  Places of Interest
-  <div class="explanation">
-    Museum, Movie Theater.
-  </div>
-</div>
-
-<div class="option">
-  Rules Clarifications
-  <div class="explanation">
-    If the feature does not exist within map boundaries, answer is null.
-  </div>
-</div>
-
-</section>
-
-<!-- RADAR -->
-
-<section>
-<h2>Radar Questions</h2>
-<p>“Are you within ____ of me?”</p>
-<small>Yes / No • 5 min • Draw 2 keep 1</small>
-
-<div class="option">
-  Distance Options
-  <div class="explanation">
-    400m, 800m, 2km, 5km, 8km, 16km, 40km, 80km, 160km, or custom.
-  </div>
-</div>
-
-<div class="option">
-  Rules Clarifications
-  <div class="explanation">
-    Radar checks your exact current position, not your hiding zone.
-  </div>
-</div>
-
-</section>
-
-<!-- THERMOMETER -->
-
-<section>
-<h2>Thermometer Questions</h2>
-<p>“After traveling ____, am I hotter or colder?”</p>
-<small>Hotter / Colder • 5 min • Draw 2 keep 1</small>
-
-<div class="option">
-  Sizes
-  <div class="explanation">
-    800m, 5km, 16km, 80km.
-  </div>
-</div>
-
-</section>
-
-<!-- PHOTO -->
-
-<section>
-<h2>Photo Questions</h2>
-<small>Valid photo or null • 10 min • Draw 1 keep 1</small>
-
-<div class="option">
-  Small Game
-  <div class="explanation">
-    Building from Transit Station, Widest Street, Tree, Tallest Structure,  
-    You (Selfie), Sky, Trace 800m Street, 2 Buildings.
-  </div>
-</div>
-
-<div class="option">
-  Medium Game
-  <div class="explanation">
-    Tallest Building from Transit Station, Trace Nearest Street,  
-    Restaurant Interior, Park, Grocery Aisle, Place of Worship, Train Platform.
-  </div>
-</div>
-
-<div class="option">
-  Rules Clarifications
-  <div class="explanation">
-    Follow rulebook. Must meet full framing requirements. 
-    No Street View or intentional image searching. Null if does not exist or cannot reach location (endgame already triggered).
-  </div>
-</div>
-
-</section>
-
-</main>
-
-<footer>
-Thanks to the Jet Lag team
-</footer>
 
 <script>
-document.querySelectorAll(".option").forEach(option => {
-  option.addEventListener("click", () => {
-    option.classList.toggle("active");
-  });
-});
-</script>
+    async function loadQuestions() {
+        try {
+            const res = await fetch('questions.json');
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            render(Array.isArray(data) ? data : data.categories);
+        } catch (err) {
+            document.getElementById('categories-container').innerHTML =
+                `<div class="status-message error">
+                    ⚠️ Could not load questions.json<br>
+                    <small style="color:#999;margin-top:8px;display:block">${err.message}</small>
+                </div>`;
+        }
+    }
 
+    function render(categories) {
+        const container = document.getElementById('categories-container');
+        container.innerHTML = '';
+        categories.forEach(cat => container.appendChild(buildColumn(cat)));
+    }
+
+    function buildColumn(cat) {
+        const color   = cat.color   || '#2c3e50';
+        const columns = cat.columns || 1;
+
+        const col = document.createElement('div');
+        col.className = 'category-column';
+        col.style.setProperty('--cat-color', color);
+
+        // ── Header ──────────────────────────────────────────────────────────
+        const header = document.createElement('div');
+        header.className = 'category-header';
+
+        const iconWrap = document.createElement('div');
+        iconWrap.className = 'category-icon-wrapper';
+
+        if (cat.icon) {
+            const img = document.createElement('img');
+            img.src = cat.icon;
+            img.alt = cat.name || '';
+            iconWrap.appendChild(img);
+        }
+
+        const info = document.createElement('div');
+        info.className = 'category-info';
+
+        const nameEl = document.createElement('div');
+        nameEl.className = 'category-name';
+        nameEl.textContent = (cat.name || '').toUpperCase();
+
+        const rewardEl = document.createElement('div');
+        rewardEl.className = 'category-reward';
+        rewardEl.textContent = (cat.reward || '').toUpperCase();
+
+        info.append(nameEl, rewardEl);
+        header.append(iconWrap, info);
+        col.appendChild(header);
+
+        // ── Grid ────────────────────────────────────────────────────────────
+        const grid = document.createElement('div');
+        grid.className = 'questions-grid';
+        /*
+            Set the desktop column layout directly from JSON.
+            On mobile the media query overrides this with auto-fill.
+        */
+        grid.style.gridTemplateColumns = `repeat(${columns}, var(--btn-size, 55px))`;
+
+        (cat.questions || []).forEach(q => grid.appendChild(buildButton(q, cat, color)));
+
+        col.appendChild(grid);
+        return col;
+    }
+
+    function buildButton(q, cat, color) {
+        const btn = document.createElement('button');
+        btn.className = 'question-btn';
+        btn.setAttribute('aria-label', q.title || q.name || 'Question');
+
+        if (q.icon) {
+            const img = document.createElement('img');
+            img.src = q.icon;
+            img.alt = q.title || q.name || '';
+            img.onerror = () => img.remove();
+            btn.appendChild(img);
+        }
+
+        if (q.label) {
+            const span = document.createElement('span');
+            span.className = 'btn-label';
+            span.textContent = q.label;
+            btn.appendChild(span);
+        }
+
+        btn.addEventListener('click', () => openModal(q, cat, color));
+        return btn;
+    }
+
+    // ── Modal ────────────────────────────────────────────────────────────────
+    function openModal(q, cat, color) {
+        const iconEl  = document.getElementById('modal-icon');
+        const iconImg = document.getElementById('modal-icon-img');
+
+        iconEl.style.backgroundColor = color;
+
+        if (q.icon) {
+            iconImg.src = q.icon;
+            iconImg.alt = q.title || q.name || '';
+            iconImg.style.display = 'block';
+        } else {
+            iconImg.style.display = 'none';
+        }
+
+        document.getElementById('modal-category-label').textContent          = (cat.name || '').toUpperCase();
+        document.getElementById('modal-title').textContent                    = q.title || q.name || '';
+        document.getElementById('modal-divider').style.backgroundColor        = color;
+        document.getElementById('modal-description').innerHTML                = q.description || '<em style="color:#aaa">No description available.</em>';
+        document.getElementById('modal-close-btn').style.backgroundColor      = color;
+
+        document.getElementById('modal-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('modal-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('modal-overlay').addEventListener('click', e => {
+        if (e.target === document.getElementById('modal-overlay')) closeModal();
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    loadQuestions();
+</script>
 </body>
 </html>
