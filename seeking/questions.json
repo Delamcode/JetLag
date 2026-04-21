@@ -15,57 +15,57 @@
       "questions": [
         {
           "title": "Transit Line",
-          "icon": "icons/transit_line.png",
+          "icon": "icons/transitline.svg",
           "description": "Is your nearest transit line the same as mine?<br><br><strong>Important:</strong> In order to ask this question, seekers must be on the form of transit, and it must be moving.<br><br>The answer is yes if the transit the seekers are currently riding would stop at the hider's station. <br>Best practice is for seekers to screenshot all the stations their transit would stop at and send them to the hider."
         },
         {
           "title": "Station Name Length",
-          "icon": "icons/station_name.png",
+          "icon": "icons/stationname.svg",
           "description": "Is the number of characters in your nearest station name the same as mine?<br><br>Count hyphens and spaces. Use the station name as defined by Google Maps — if the app includes the word \"station,\" that counts.<br><br><strong>Note:</strong> When answering, you must also state if your station name is longer or shorter than theirs."
         },
         {
           "title": "Street or Path",
-          "icon": "icons/street.png",
+          "icon": "icons/street.svg",
           "description": "Is your nearest street or path the same as mine?<br><br>A street or path is considered to have ended when it acquires a different name — including changing from, say, \"Jet Lag St. East\" to \"Jet Lag St. West\".<br><br>If a street or path is unnamed, it is considered to start or end wherever it has an intersection."
         },
         {
           "title": "Naselje",
-          "icon": "icons/naselje.png",
+          "icon": "icons/border1.svg",
           "description": "Is your nearest naselje the same as mine?<br><br><strong>Pick from:</strong> Besnica, Brezje pri Lipoglavu, Dolgo Brdo, Dvor, Češnjica, Črna vas, Gabrje pri Jančah, Gunclje, Janče, Javor, Lipe, Ljubljana, Mali Lipoglav, Mali Vrh pri Prežganju, Malo Trebeljevo, Medno, Pance, Podgrad, Podlipoglav, Podmolnik, Prežganje, Ravno Brdo, Rašica, Repče, Sadinja vas, Selo pri Pancah, Spodnje Gameljne, Srednje Gameljne, Stanežiče, Šentpavel, Toško Čelo, Tuji Grm, Veliki Lipoglav, Veliko Trebeljevo, Vnajnarje, Volavlje, Zagradišče, Zgornja Besnica, Zgornje Gameljne. <br><br>If unclear, use <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
         },
         {
           "title": "Četrtna skupnost",
-          "icon": "icons/cetrtna_skupnost.png",
+          "icon": "icons/border2.svg",
           "description": "Is your nearest četrtna skupnost the same as mine?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
           "title": "Park",
-          "icon": "icons/park.png",
+          "icon": "icons/park.svg",
           "description": "Is your nearest park the same as mine?<br><br>Anything correctly classified as a park by Google Maps, generally including a tree icon."
         },
         {
           "title": "Museum",
-          "icon": "icons/museum.png",
+          "icon": "icons/museum.svg",
           "description": "Is your nearest museum the same as mine?<br><br>Anything correctly categorized as a museum by Google Maps."
         },
         {
           "title": "Movie Theater",
-          "icon": "icons/movie_theater.png",
+          "icon": "icons/movietheater.svg",
           "description": "Is your nearest movie theater the same as mine?<br><br>Anything correctly categorized as a movie theater by Google Maps."
         },
         {
           "title": "Library",
-          "icon": "icons/library.png",
+          "icon": "icons/library.svg",
           "description": "Is your nearest library the same as mine?<br><br>Libraries marked on <a href=\"https://www.mklj.si/knjiznica/\">mklj</a>."
         },
         {
           "title": "Embassy",
-          "icon": "icons/embassy.png",
+          "icon": "icons/embassy.svg",
           "description": "Is your nearest embassy the same as mine?<br><br>Anything correctly categorized as an embassy by Google Maps."
         },
         {
           "title": "Police Station",
-          "icon": "icons/police_station.png",
+          "icon": "icons/police.svg",
           "description": "Is your nearest police station the same as mine?<br><br>Police stations marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
         }
       ]
@@ -75,54 +75,54 @@
       "reward": "Draw 3, Pick 1",
       "color": "#27ae60",
       "columns": 4,
-      "icon": "icons/measuring.png",
+      "icon": "icons/measuring.svg",
       "format": "Compared to me, are you closer to or further from XYZ? (must include your distance)",
       "valid_answers": ["closer", "further"],
       "time_limit_minutes": 5,
       "questions": [
         {
           "title": "Commercial Airport",
-          "icon": "icons/airport.png",
+          "icon": "icons/plane.svg",
           "description": "Compared to me, are you closer to or further from the nearest commercial airport?<br><br>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via <a href=\"flights.google.com\">Google Flights</a>."
         },
         {
           "title": "Rail Station",
-          "icon": "icons/rail_station.png",
+          "icon": "icons/train.svg",
           "description": "Compared to me, are you closer to or further from the nearest rail station?<br><br><strong>Pick from:</strong> Polje, Zalog, Vodmat, Črnuče, Ljubljana, Trzin, Brinje, Ježica, Rakovnik."
         },
         {
           "title": "Četrtna skupnost Border",
-          "icon": "icons/cetrtna_skupnost.png",
+          "icon": "icons/border2.svg",
           "description": "Compared to me, are you closer to or further from the nearest četrtna skupnost border?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
           "title": "Sea Level",
-          "icon": "icons/sea_level.png",
+          "icon": "icons/height.svg",
           "description": "Compared to me, are you higher or lower than me above sea level?<br><br><strong>Valid answers: higher or lower.</strong><br><br>This refers to a player's altitude. You can find this using your phone's compass. Fair warning: sometimes the compass is wrong, so don't rely too heavily on this being 100% accurate."
         },
         {
           "title": "Body of Water",
-          "icon": "icons/water.png",
+          "icon": "icons/water.svg",
           "description": "Compared to me, are you closer to or further from the nearest body of water?<br><br>Any named body of water on Google Maps, including rivers, excluding pools."
         },
         {
           "title": "Park",
-          "icon": "icons/park.png",
+          "icon": "icons/park.svg",
           "description": "Compared to me, are you closer to or further from the nearest park?<br><br>Anything correctly classified as a park by Google Maps, generally including a tree icon."
         },
         {
           "title": "Forest",
-          "icon": "icons/forest.png",
+          "icon": "icons/forest.svg",
           "description": "Compared to me, are you closer to or further from the nearest forest?<br><br>Forests marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>. <br><br>Being inside of a forest is defined as being zero meters away from it; otherwise the closest border is used."
         },
         {
           "title": "Museum",
-          "icon": "icons/museum.png",
+          "icon": "icons/museum.svg",
           "description": "Compared to me, are you closer to or further from the nearest museum?<br><br>Anything correctly categorized as a museum by Google Maps."
         },
         {
           "title": "Movie Theater",
-          "icon": "icons/movie_theater.png",
+          "icon": "icons/movietheater.svg",
           "description": "Compared to me, are you closer to or further from the nearest movie theater?<br><br>Anything correctly categorized as a movie theater by Google Maps."
         }
       ]
@@ -132,7 +132,7 @@
       "reward": "Draw 2, Pick 1",
       "color": "#e67e22",
       "columns": 3,
-      "icon": "icons/radar.png",
+      "icon": "icons/radar.svg",
       "format": "Are you within XYZ of me? (must include your current location)",
       "valid_answers": ["yes", "no"],
       "time_limit_minutes": 5,
@@ -142,31 +142,26 @@
       "questions": [
         {
           "title": "400m",
-          "icon": "icons/radar_400.png",
           "label": "400m",
           "description": "Are you within <strong>400 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
           "title": "800m",
-          "icon": "icons/radar_800.png",
           "label": "800m",
           "description": "Are you within <strong>800 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
           "title": "2km",
-          "icon": "icons/radar_2km.png",
           "label": "2km",
           "description": "Are you within <strong>2 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
           "title": "5km",
-          "icon": "icons/radar_5km.png",
           "label": "5km",
           "description": "Are you within <strong>5 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
           "title": "Choose",
-          "icon": "icons/radar_choose.png",
           "label": "Choose",
           "description": "The hider chooses any distance for the radar question.<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         }
@@ -177,7 +172,7 @@
       "reward": "Draw 2, Pick 1",
       "color": "#f1c40f",
       "columns": 3,
-      "icon": "icons/thermometer.png",
+      "icon": "icons/thermometer.svg",
       "format": "After traveling XYZ, am I hotter or colder?",
       "valid_answers": ["hotter", "colder"],
       "time_limit_minutes": 5,
@@ -187,13 +182,11 @@
       "questions": [
         {
           "title": "800m",
-          "icon": "icons/thermometer_800.png",
           "label": "800m",
-          "description": "After traveling <strong>800 meters</strong>, am I hotter or colder?<br><br>This is a small thermometer question."
+          "description": "After traveling <strong>800 meters</strong>, am I hotter or colder?"
         },
         {
           "title": "5km",
-          "icon": "icons/thermometer_5km.png",
           "label": "5km",
           "description": "After traveling <strong>5 kilometers</strong>, am I hotter or colder?"
         }
@@ -204,7 +197,7 @@
       "reward": "Draw 1, Pick 1",
       "color": "#5dade2",
       "columns": 4,
-      "icon": "icons/photo.png",
+      "icon": "icons/photo.svg",
       "format": "Send me a photo of XYZ.",
       "valid_answers": ["a photo meeting the full specifications"],
       "time_limit_minutes": 10,
@@ -216,47 +209,47 @@
       "questions": [
         {
           "title": "Any Building Visible from Transit Station",
-          "icon": "icons/building_transit.png",
+          "icon": "icons/building.svg",
           "description": "Send a photo of any building visible from a transit station.<br><br>Must stand directly outside a station entrance — if there are multiple entrances, you may choose. Must include the roof and both sides, with the top of the building in the top ⅓ of the frame. The building may not be the transit station itself."
         },
         {
           "title": "Widest Street",
-          "icon": "icons/wide_street.png",
+          "icon": "icons/street.svg",
           "description": "Send a photo of the widest street in your current area.<br><br>Must include both sides of the street; does not have to include background."
         },
         {
           "title": "Tree",
-          "icon": "icons/tree.png",
+          "icon": "icons/forest.svg",
           "description": "Send a photo of a tree.<br><br>Must include the entire tree. This may be any tree."
         },
         {
           "title": "Tallest Structure in Sightline",
-          "icon": "icons/tallest_structure.png",
+          "icon": "icons/skyscraper.svg",
           "description": "Send a photo of the tallest structure in your current sightline.<br><br>Must include the top and both sides. The top must be in the top ⅓ of the frame."
         },
         {
           "title": "You",
-          "icon": "icons/selfie.png",
+          "icon": "icons/selfie.svg",
           "description": "Send a selfie.<br><br>Selfie mode. Phone perpendicular to ground, arm fully extended, using your phone's default lens with no zoom."
         },
         {
           "title": "The Sky",
-          "icon": "icons/sky.png",
+          "icon": "icons/sky.svg",
           "description": "Send a photo of the sky.<br><br>Place phone on ground, shoot directly up using your phone's default lens with no zoom."
         },
         {
           "title": "Trace Any Street/Path(s)",
-          "icon": "icons/trace_street.png",
+          "icon": "icons/street.svg",
           "description": "Send a photo tracing any street or path(s).<br><br>Street/path(s) must be visible on a mapping app. All streets/paths must be continuous. Send north-south oriented. Must be at least 800 meters long."
         },
         {
           "title": "2 Buildings",
-          "icon": "icons/two_buildings.png",
+          "icon": "icons/building.svg",
           "description": "Send a photo of 2 buildings.<br><br>Must include the bottom and up to four stories of each building."
         },
         {
           "title": "Restaurant Interior",
-          "icon": "icons/restaurant.png",
+          "icon": "icons/restaurant.svg",
           "description": "Send a photo of a restaurant interior.<br><br>No zoom. Must take the picture through the window from outside the restaurant."
         }
       ]
