@@ -36,7 +36,7 @@
         {
           "title": "Četrtna skupnost",
           "icon": "icons/cetrtna_skupnost.png",
-          "description": "Is your nearest četrtna skupnost the same as mine?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
+          "description": "Is your nearest četrtna skupnost the same as mine?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
           "title": "Park",
@@ -93,7 +93,7 @@
         {
           "title": "Četrtna skupnost Border",
           "icon": "icons/cetrtna_skupnost.png",
-          "description": "Compared to me, are you closer to or further from the nearest četrtna skupnost border?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
+          "description": "Compared to me, are you closer to or further from the nearest četrtna skupnost border?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
           "title": "Sea Level",
