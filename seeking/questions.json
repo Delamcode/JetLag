@@ -1,274 +1,287 @@
 {
-  "categories": [
+  "categories":[
     {
-      "name": "Matching",
-      "reward": "Draw 3, Pick 1",
-      "color": "#2c3e50",
-      "columns": 4,
-      "icon": "icons/matching.svg",
-      "format": "Is your nearest XYZ the same as my XYZ?",
-      "valid_answers": ["yes", "no"],
-      "time_limit_minutes": 5,
-      "notes": [
+      "name":"Matching",
+      "reward":"Draw 3, Pick 1",
+      "color":"#2c3e50",
+      "columns":4,
+      "icon":"icons/matching.svg",
+      "format":"Is your nearest XYZ the same as my XYZ?",
+      "valid_answers":[
+        "yes",
+        "no"
+      ],
+      "time_limit_minutes":5,
+      "notes":[
         "If locations are not within a map's boundaries, players must operate as if they do not exist.",
         "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer."
       ],
-      "questions": [
+      "questions":[
         {
-          "title": "Transit Line",
-          "icon": "icons/transitline.svg",
-          "description": "Is your nearest transit line the same as mine?<br><br><strong>Important:</strong> In order to ask this question, seekers must be on the form of transit, and it must be moving.<br><br>The answer is yes if the transit the seekers are currently riding would stop at the hider's station. <br>Best practice is for seekers to screenshot all the stations their transit would stop at and send them to the hider."
+          "title":"Transit Line",
+          "icon":"icons/transitline.svg",
+          "description":"Is your nearest transit line the same as mine?<br><br><strong>Important:</strong> In order to ask this question, seekers must be on the form of transit, and it must be moving.<br><br>The answer is yes if the transit the seekers are currently riding would stop at the hider's station. <br>Best practice is for seekers to screenshot all the stations their transit would stop at and send them to the hider."
         },
         {
-          "title": "Station Name Length",
-          "icon": "icons/stationname.svg",
-          "description": "Is the number of characters in your nearest station name the same as mine?<br><br>Count hyphens and spaces. Use the station name as defined by Google Maps — if the app includes the word \"station,\" that counts.<br><br><strong>Note:</strong> When answering, you must also state if your station name is longer or shorter than theirs."
+          "title":"Station Name Length",
+          "icon":"icons/stationname.svg",
+          "description":"Is the number of characters in your nearest station name the same as mine?<br><br>Count hyphens and spaces. Use the station name as defined by Google Maps — if the app includes the word \"station,\" that counts.<br><br><strong>Note:</strong> When answering, you must also state if your station name is longer or shorter than theirs."
         },
         {
-          "title": "Street or Path",
-          "icon": "icons/street.svg",
-          "description": "Is your nearest street or path the same as mine?<br><br>A street or path is considered to have ended when it acquires a different name — including changing from, say, \"Jet Lag St. East\" to \"Jet Lag St. West\".<br><br>If a street or path is unnamed, it is considered to start or end wherever it has an intersection."
+          "title":"Street or Path",
+          "icon":"icons/street.svg",
+          "description":"Is your nearest street or path the same as mine?<br><br>A street or path is considered to have ended when it acquires a different name — including changing from, say, \"Jet Lag St. East\" to \"Jet Lag St. West\".<br><br>If a street or path is unnamed, it is considered to start or end wherever it has an intersection."
         },
         {
-          "title": "Naselje",
-          "icon": "icons/border1.svg",
-          "description": "Is your nearest naselje the same as mine?<br><br><strong>Pick from:</strong> Besnica, Brezje pri Lipoglavu, Dolgo Brdo, Dvor, Češnjica, Črna vas, Gabrje pri Jančah, Gunclje, Janče, Javor, Lipe, Ljubljana, Mali Lipoglav, Mali Vrh pri Prežganju, Malo Trebeljevo, Medno, Pance, Podgrad, Podlipoglav, Podmolnik, Prežganje, Ravno Brdo, Rašica, Repče, Sadinja vas, Selo pri Pancah, Spodnje Gameljne, Srednje Gameljne, Stanežiče, Šentpavel, Toško Čelo, Tuji Grm, Veliki Lipoglav, Veliko Trebeljevo, Vnajnarje, Volavlje, Zagradišče, Zgornja Besnica, Zgornje Gameljne. <br><br>If unclear, use <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
+          "title":"Naselje",
+          "icon":"icons/border1.svg",
+          "description":"Is your nearest naselje the same as mine?<br><br><strong>Pick from:</strong> Besnica, Brezje pri Lipoglavu, Dolgo Brdo, Dvor, Češnjica, Črna vas, Gabrje pri Jančah, Gunclje, Janče, Javor, Lipe, Ljubljana, Mali Lipoglav, Mali Vrh pri Prežganju, Malo Trebeljevo, Medno, Pance, Podgrad, Podlipoglav, Podmolnik, Prežganje, Ravno Brdo, Rašica, Repče, Sadinja vas, Selo pri Pancah, Spodnje Gameljne, Srednje Gameljne, Stanežiče, Šentpavel, Toško Čelo, Tuji Grm, Veliki Lipoglav, Veliko Trebeljevo, Vnajnarje, Volavlje, Zagradišče, Zgornja Besnica, Zgornje Gameljne. <br><br>If unclear, use <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
         },
         {
-          "title": "Četrtna skupnost",
-          "icon": "icons/border2.svg",
-          "description": "Is your nearest četrtna skupnost the same as mine?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
+          "title":"Četrtna skupnost",
+          "icon":"icons/border2.svg",
+          "description":"Is your nearest četrtna skupnost the same as mine?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
-          "title": "Park",
-          "icon": "icons/park.svg",
-          "description": "Is your nearest park the same as mine?<br><br>Anything correctly classified as a park by Google Maps, generally including a tree icon."
+          "title":"Park",
+          "icon":"icons/park.svg",
+          "description":"Is your nearest park the same as mine?<br><br>Anything correctly classified as a park by Google Maps, generally including a tree icon."
         },
         {
-          "title": "Museum",
-          "icon": "icons/museum.svg",
-          "description": "Is your nearest museum the same as mine?<br><br>Anything correctly categorized as a museum by Google Maps."
+          "title":"Museum",
+          "icon":"icons/museum.svg",
+          "description":"Is your nearest museum the same as mine?<br><br>Anything correctly categorized as a museum by Google Maps."
         },
         {
-          "title": "Movie Theater",
-          "icon": "icons/movietheater.svg",
-          "description": "Is your nearest movie theater the same as mine?<br><br>Anything correctly categorized as a movie theater by Google Maps."
+          "title":"Movie Theater",
+          "icon":"icons/movietheater.svg",
+          "description":"Is your nearest movie theater the same as mine?<br><br>Anything correctly categorized as a movie theater by Google Maps."
         },
         {
-          "title": "Library",
-          "icon": "icons/library.svg",
-          "description": "Is your nearest library the same as mine?<br><br>Libraries marked on <a href=\"https://www.mklj.si/knjiznica/\">mklj</a>."
+          "title":"Library",
+          "icon":"icons/library.svg",
+          "description":"Is your nearest library the same as mine?<br><br>Libraries marked on <a href=\"https://www.mklj.si/knjiznica/\">mklj</a>."
         },
         {
-          "title": "Embassy",
-          "icon": "icons/embassy.svg",
-          "description": "Is your nearest embassy the same as mine?<br><br>Anything correctly categorized as an embassy by Google Maps."
+          "title":"Embassy",
+          "icon":"icons/embassy.svg",
+          "description":"Is your nearest embassy the same as mine?<br><br>Anything correctly categorized as an embassy by Google Maps."
         },
         {
-          "title": "Police Station",
-          "icon": "icons/police.svg",
-          "description": "Is your nearest police station the same as mine?<br><br>Police stations marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
+          "title":"Police Station",
+          "icon":"icons/police.svg",
+          "description":"Is your nearest police station the same as mine?<br><br>Police stations marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
         }
       ]
     },
     {
-      "name": "Measuring",
-      "reward": "Draw 3, Pick 1",
-      "color": "#27ae60",
-      "columns": 4,
-      "icon": "icons/measuring.svg",
-      "format": "Compared to me, are you closer to or further from XYZ? (must include your distance)",
-      "valid_answers": ["closer", "further"],
-      "time_limit_minutes": 5,
-      "notes": [
+      "name":"Measuring",
+      "reward":"Draw 3, Pick 1",
+      "color":"#27ae60",
+      "columns":4,
+      "icon":"icons/measuring.svg",
+      "format":"Compared to me, are you closer to or further from XYZ? (must include your distance)",
+      "valid_answers":[
+        "closer",
+        "further"
+      ],
+      "time_limit_minutes":5,
+      "notes":[
         "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer."
       ],
-      "questions": [
+      "questions":[
         {
-          "title": "Commercial Airport",
-          "icon": "icons/plane.svg",
-          "description": "Compared to me, are you closer to or further from the nearest commercial airport?<br><br>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via <a href=\"flights.google.com\">Google Flights</a>."
+          "title":"Commercial Airport",
+          "icon":"icons/plane.svg",
+          "description":"Compared to me, are you closer to or further from the nearest commercial airport?<br><br>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via <a href=\"flights.google.com\">Google Flights</a>."
         },
         {
-          "title": "Rail Station",
-          "icon": "icons/train.svg",
-          "description": "Compared to me, are you closer to or further from the nearest rail station?<br><br><strong>Pick from:</strong> Polje, Zalog, Vodmat, Črnuče, Ljubljana, Trzin, Brinje, Ježica, Rakovnik."
+          "title":"Rail Station",
+          "icon":"icons/train.svg",
+          "description":"Compared to me, are you closer to or further from the nearest rail station?<br><br><strong>Pick from:</strong> Polje, Zalog, Vodmat, Črnuče, Ljubljana, Trzin, Brinje, Ježica, Rakovnik."
         },
         {
-          "title": "Četrtna skupnost Border",
-          "icon": "icons/border2.svg",
-          "description": "Compared to me, are you closer to or further from the nearest četrtna skupnost border?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
+          "title":"Četrtna skupnost Border",
+          "icon":"icons/border2.svg",
+          "description":"Compared to me, are you closer to or further from the nearest četrtna skupnost border?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. <br><br>If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
-          "title": "Sea Level",
-          "icon": "icons/height.svg",
-          "description": "Compared to me, are you higher or lower than me above sea level?<br><br><strong>Valid answers: higher or lower.</strong><br><br>This refers to a player's altitude. You can find this using your phone's compass. Fair warning: sometimes the compass is wrong, so don't rely too heavily on this being 100% accurate."
+          "title":"Sea Level",
+          "icon":"icons/height.svg",
+          "description":"Compared to me, are you higher or lower than me above sea level?<br><br><strong>Valid answers: higher or lower.</strong><br><br>This refers to a player's altitude. You can find this using your phone's compass. Fair warning: sometimes the compass is wrong, so don't rely too heavily on this being 100% accurate."
         },
         {
-          "title": "Body of Water",
-          "icon": "icons/water.svg",
-          "description": "Compared to me, are you closer to or further from the nearest body of water?<br><br>Any named body of water on Google Maps, including rivers, excluding pools."
+          "title":"Body of Water",
+          "icon":"icons/water.svg",
+          "description":"Compared to me, are you closer to or further from the nearest body of water?<br><br>Any named body of water on Google Maps, including rivers, excluding pools."
         },
         {
-          "title": "Park",
-          "icon": "icons/park.svg",
-          "description": "Compared to me, are you closer to or further from the nearest park?<br><br>Anything correctly classified as a park by Google Maps, generally including a tree icon."
+          "title":"Park",
+          "icon":"icons/park.svg",
+          "description":"Compared to me, are you closer to or further from the nearest park?<br><br>Anything correctly classified as a park by Google Maps, generally including a tree icon."
         },
         {
-          "title": "Forest",
-          "icon": "icons/forest.svg",
-          "description": "Compared to me, are you closer to or further from the nearest forest?<br><br>Forests marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>. <br><br>Being inside of a forest is defined as being zero meters away from it; otherwise the closest border is used."
+          "title":"Forest",
+          "icon":"icons/forest.svg",
+          "description":"Compared to me, are you closer to or further from the nearest forest?<br><br>Forests marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>. <br><br>Being inside of a forest is defined as being zero meters away from it; otherwise the closest border is used."
         },
         {
-          "title": "Museum",
-          "icon": "icons/museum.svg",
-          "description": "Compared to me, are you closer to or further from the nearest museum?<br><br>Anything correctly categorized as a museum by Google Maps."
+          "title":"Museum",
+          "icon":"icons/museum.svg",
+          "description":"Compared to me, are you closer to or further from the nearest museum?<br><br>Anything correctly categorized as a museum by Google Maps."
         },
         {
-          "title": "Movie Theater",
-          "icon": "icons/movietheater.svg",
-          "description": "Compared to me, are you closer to or further from the nearest movie theater?<br><br>Anything correctly categorized as a movie theater by Google Maps."
+          "title":"Movie Theater",
+          "icon":"icons/movietheater.svg",
+          "description":"Compared to me, are you closer to or further from the nearest movie theater?<br><br>Anything correctly categorized as a movie theater by Google Maps."
         }
       ]
     },
     {
-      "name": "Radar",
-      "reward": "Draw 2, Pick 1",
-      "color": "#e67e22",
-      "columns": 3,
-      "icon": "icons/radar.svg",
-      "format": "Are you within XYZ of me? (must include your current location)",
-      "valid_answers": ["yes", "no"],
-      "time_limit_minutes": 5,
-      "notes": [
+      "name":"Radar",
+      "reward":"Draw 2, Pick 1",
+      "color":"#e67e22",
+      "columns":3,
+      "icon":"icons/radar.svg",
+      "format":"Are you within XYZ of me? (must include your current location)",
+      "valid_answers":[
+        "yes",
+        "no"
+      ],
+      "time_limit_minutes":5,
+      "notes":[
         "GPS is not always completely accurate.",
         "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer.",
         "Radars ask about your location, not your hiding zone. If the radar would encompass part of your hiding zone, but not your location at the time of answering, it would be a miss. You may move back to the excluded region of your hiding zone before the end game."
       ],
-      "questions": [
+      "questions":[
         {
-          "title": "400m",
-          "label": "400m",
-          "icon": "icons/radar.svg",
-          "description": "Are you within <strong>400 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "title":"400m",
+          "label":"400m",
+          "icon":"icons/radar.svg",
+          "description":"Are you within <strong>400 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
-          "title": "800m",
-          "label": "800m",
-          "icon": "icons/radar.svg",
-          "description": "Are you within <strong>800 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "title":"800m",
+          "label":"800m",
+          "icon":"icons/radar.svg",
+          "description":"Are you within <strong>800 meters</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
-          "title": "2km",
-          "label": "2km",
-          "icon": "icons/radar.svg",
-          "description": "Are you within <strong>2 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "title":"2km",
+          "label":"2km",
+          "icon":"icons/radar.svg",
+          "description":"Are you within <strong>2 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
-          "title": "5km",
-          "label": "5km",
-          "icon": "icons/radar.svg",
-          "description": "Are you within <strong>5 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "title":"5km",
+          "label":"5km",
+          "icon":"icons/radar.svg",
+          "description":"Are you within <strong>5 kilometers</strong> of me?<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         },
         {
-          "title": "???",
-          "label": "???",
-          "icon": "icons/radar.svg",
-          "description": "The seeker chooses any distance for the radar question.<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
+          "title":"???",
+          "label":"???",
+          "icon":"icons/radar.svg",
+          "description":"The seeker chooses any distance for the radar question.<br><br>Seekers must include their current location when asking. Note that GPS is not always completely accurate."
         }
       ]
     },
     {
-      "name": "Thermometer",
-      "reward": "Draw 2, Pick 1",
-      "color": "#f1c40f",
-      "columns": 3,
-      "icon": "icons/thermometer.svg",
-      "format": "After traveling XYZ, am I hotter or colder?",
-      "valid_answers": ["hotter", "colder"],
-      "time_limit_minutes": 5,
-      "notes": [
+      "name":"Thermometer",
+      "reward":"Draw 2, Pick 1",
+      "color":"#f1c40f",
+      "columns":3,
+      "icon":"icons/thermometer.svg",
+      "format":"After traveling XYZ, am I hotter or colder?",
+      "valid_answers":[
+        "hotter",
+        "colder"
+      ],
+      "time_limit_minutes":5,
+      "notes":[
         "If you randomize a thermometer, the seekers may be unable or unwilling to do the new thermometer. In this case, the new thermometer isn't considered asked, but you still get to draw the cards.",
         "If the answer is ambiguous (meaning the hider is an equal distance away from the seeker’s nearest and another), the hider may answer null, however, this gives a lot of information, therefore it is recommended the hider physically moves to change the answer.",
         "When starting a thermometer question, you should inform the hider that you are starting a thermometer and send them your current location. Then, after traveling a sufficient distance – measured as the crow flies – send them your new location. If the new location is closer to the hider’s current location, then you are hotter. Otherwise, you are colder."
       ],
-      "questions": [
+      "questions":[
         {
-          "title": "800m",
-          "label": "800m",
-          "icon": "icons/thermometer.svg",
-          "description": "After traveling <strong>800 meters</strong>, am I hotter or colder?"
+          "title":"800m",
+          "label":"800m",
+          "icon":"icons/thermometer.svg",
+          "description":"After traveling <strong>800 meters</strong>, am I hotter or colder?"
         },
         {
-          "title": "5km",
-          "label": "5km",
-          "icon": "icons/thermometer.svg",
-          "description": "After traveling <strong>5 kilometers</strong>, am I hotter or colder?"
+          "title":"5km",
+          "label":"5km",
+          "icon":"icons/thermometer.svg",
+          "description":"After traveling <strong>5 kilometers</strong>, am I hotter or colder?"
         }
       ]
     },
     {
-      "name": "Photo",
-      "reward": "Draw 1, Pick 1",
-      "color": "#5dade2",
-      "columns": 4,
-      "icon": "icons/photo.svg",
-      "format": "Send me a photo of XYZ.",
-      "valid_answers": ["a photo meeting the full specifications"],
-      "time_limit_minutes": 10,
-      "notes": [
+      "name":"Photo",
+      "reward":"Draw 1, Pick 1",
+      "color":"#5dade2",
+      "columns":4,
+      "icon":"icons/photo.svg",
+      "format":"Send me a photo of XYZ.",
+      "valid_answers":[
+        "a photo meeting the full specifications"
+      ],
+      "time_limit_minutes":10,
+      "notes":[
         "You are allowed to censor any text in photos you send the seekers.",
         "All photos must be sent in your phone's normal aspect ratio.",
         "If you are asked a photo question and the seekers arrive in your hiding zone within 10 minutes of you taking the photo, you can pause the game until you are done taking the photo and can reposition to your intended final hiding spot. During a pause, the seekers can't move and the hide time clock is paused.",
         "In situations where the subject of the photograph doesn’t exist in the hiding zone or is impossible to answer because the hider cannot move (during the end game), a valid answer is null."
       ],
-      "questions": [
+      "questions":[
         {
-          "title": "Any Building Visible from Transit Station",
-          "icon": "icons/building.svg",
-          "description": "Send a photo of any building visible from a transit station.<br><br>Must stand directly outside a station entrance — if there are multiple entrances, you may choose. Must include the roof and both sides, with the top of the building in the top ⅓ of the frame. The building may not be the transit station itself."
+          "title":"Any Building Visible from Transit Station",
+          "icon":"icons/building.svg",
+          "description":"Send a photo of any building visible from a transit station.<br><br>Must stand directly outside a station entrance — if there are multiple entrances, you may choose. Must include the roof and both sides, with the top of the building in the top ⅓ of the frame. The building may not be the transit station itself."
         },
         {
-          "title": "Widest Street",
-          "icon": "icons/street.svg",
-          "description": "Send a photo of the widest street in your current area.<br><br>Must include both sides of the street; does not have to include background."
+          "title":"Widest Street",
+          "icon":"icons/street.svg",
+          "description":"Send a photo of the widest street in your current area.<br><br>Must include both sides of the street; does not have to include background."
         },
         {
-          "title": "Tree",
-          "icon": "icons/forest.svg",
-          "description": "Send a photo of a tree.<br><br>Must include the entire tree. This may be any tree."
+          "title":"Tree",
+          "icon":"icons/forest.svg",
+          "description":"Send a photo of a tree.<br><br>Must include the entire tree. This may be any tree."
         },
         {
-          "title": "Tallest Structure in Sightline",
-          "icon": "icons/skyscraper.svg",
-          "description": "Send a photo of the tallest structure in your current sightline.<br><br>Must include the top and both sides. The top must be in the top ⅓ of the frame. <br><br>This is the tallest building from your perspective, not the objectively tallest building. If you can see the Burj Khalifa miles and miles away, but a nearby apartment building is taller from your perspective/sightline, you would send the apartment building."
+          "title":"Tallest Structure in Sightline",
+          "icon":"icons/skyscraper.svg",
+          "description":"Send a photo of the tallest structure in your current sightline.<br><br>Must include the top and both sides. The top must be in the top ⅓ of the frame. <br><br>This is the tallest building from your perspective, not the objectively tallest building. If you can see the Burj Khalifa miles and miles away, but a nearby apartment building is taller from your perspective/sightline, you would send the apartment building."
         },
         {
-          "title": "You",
-          "icon": "icons/selfie.svg",
-          "description": "Send a selfie.<br><br>Selfie mode. Phone perpendicular to ground, arm fully extended, using your phone's default lens with no zoom."
+          "title":"You",
+          "icon":"icons/selfie.svg",
+          "description":"Send a selfie.<br><br>Selfie mode. Phone perpendicular to ground, arm fully extended, using your phone's default lens with no zoom."
         },
         {
-          "title": "The Sky",
-          "icon": "icons/sky.svg",
-          "description": "Send a photo of the sky.<br><br>Place phone on ground, shoot directly up using your phone's default lens with no zoom."
+          "title":"The Sky",
+          "icon":"icons/sky.svg",
+          "description":"Send a photo of the sky.<br><br>Place phone on ground, shoot directly up using your phone's default lens with no zoom."
         },
         {
-          "title": "Trace Any Street/Path(s)",
-          "icon": "icons/street.svg",
-          "description": "Send a photo tracing any street or path(s).<br><br>Street/path(s) must be visible on a mapping app. All streets/paths must be continuous. Send north-south oriented. Must be at least 800 meters long. <br><br>This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone’s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker."
+          "title":"Trace Any Street/Path(s)",
+          "icon":"icons/street.svg",
+          "description":"Send a photo tracing any street or path(s).<br><br>Street/path(s) must be visible on a mapping app. All streets/paths must be continuous. Send north-south oriented. Must be at least 800 meters long. <br><br>This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone’s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker."
         },
         {
-          "title": "2 Buildings",
-          "icon": "icons/building.svg",
-          "description": "Send a photo of 2 buildings.<br><br>Must include the bottom and up to four stories of each building."
+          "title":"2 Buildings",
+          "icon":"icons/building.svg",
+          "description":"Send a photo of 2 buildings.<br><br>Must include the bottom and up to four stories of each building."
         },
         {
-          "title": "Restaurant Interior",
-          "icon": "icons/restaurant.svg",
-          "description": "Send a photo of a restaurant interior.<br><br>No zoom. Must take the picture through the window from outside the restaurant."
+          "title":"Restaurant Interior",
+          "icon":"icons/restaurant.svg",
+          "description":"Send a photo of a restaurant interior.<br><br>No zoom. Must take the picture through the window from outside the restaurant."
         }
       ]
     }
   ]
-}
