@@ -4,7 +4,7 @@
       "name": "Matching",
       "reward": "Draw 3, Pick 1",
       "color": "#2c3e50",
-      "columns": 5,
+      "columns": 4,
       "icon": "icons/matching.png",
       "format": "Is your nearest XYZ the same as my XYZ?",
       "valid_answers": ["yes", "no"],
@@ -16,7 +16,7 @@
         {
           "title": "Transit Line",
           "icon": "icons/transit_line.png",
-          "description": "Is your nearest transit line the same as mine?<br><br><strong>Important:</strong> In order to ask this question, seekers must be on the form of transit, and it must be moving.<br><br>The answer is yes if the transit the seekers are currently riding would stop at the hider's station. Best practice is for seekers to screenshot all the stations their transit would stop at and send them to the hider."
+          "description": "Is your nearest transit line the same as mine?<br><br><strong>Important:</strong> In order to ask this question, seekers must be on the form of transit, and it must be moving.<br><br>The answer is yes if the transit the seekers are currently riding would stop at the hider's station. <br>Best practice is for seekers to screenshot all the stations their transit would stop at and send them to the hider."
         },
         {
           "title": "Station Name Length",
@@ -31,12 +31,12 @@
         {
           "title": "Naselje",
           "icon": "icons/naselje.png",
-          "description": "Is your nearest naselje the same as mine?<br><br><strong>Pick from:</strong> Besnica, Brezje pri Lipoglavu, Dolgo Brdo, Dvor, Češnjica, Črna vas, Gabrje pri Jančah, Gunclje, Janče, Javor, Lipe, Ljubljana, Mali Lipoglav, Mali Vrh pri Prežganju, Malo Trebeljevo, Medno, Pance, Podgrad, Podlipoglav, Podmolnik, Prežganje, Ravno Brdo, Rašica, Repče, Sadinja vas, Selo pri Pancah, Spodnje Gameljne, Srednje Gameljne, Stanežiče, Šentpavel, Toško Čelo, Tuji Grm, Veliki Lipoglav, Veliko Trebeljevo, Vnajnarje, Volavlje, Zagradišče, Zgornja Besnica, Zgornje Gameljne."
+          "description": "Is your nearest naselje the same as mine?<br><br><strong>Pick from:</strong> Besnica, Brezje pri Lipoglavu, Dolgo Brdo, Dvor, Češnjica, Črna vas, Gabrje pri Jančah, Gunclje, Janče, Javor, Lipe, Ljubljana, Mali Lipoglav, Mali Vrh pri Prežganju, Malo Trebeljevo, Medno, Pance, Podgrad, Podlipoglav, Podmolnik, Prežganje, Ravno Brdo, Rašica, Repče, Sadinja vas, Selo pri Pancah, Spodnje Gameljne, Srednje Gameljne, Stanežiče, Šentpavel, Toško Čelo, Tuji Grm, Veliki Lipoglav, Veliko Trebeljevo, Vnajnarje, Volavlje, Zagradišče, Zgornja Besnica, Zgornje Gameljne. <br><br>If unclear, use <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
         },
         {
           "title": "Četrtna skupnost",
           "icon": "icons/cetrtna_skupnost.png",
-          "description": "Is your nearest četrtna skupnost the same as mine?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič."
+          "description": "Is your nearest četrtna skupnost the same as mine?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
           "title": "Park",
@@ -56,7 +56,7 @@
         {
           "title": "Library",
           "icon": "icons/library.png",
-          "description": "Is your nearest library the same as mine?<br><br>Libraries marked on mklj."
+          "description": "Is your nearest library the same as mine?<br><br>Libraries marked on <a href=\"https://www.mklj.si/knjiznica/\">mklj</a>."
         },
         {
           "title": "Embassy",
@@ -66,7 +66,7 @@
         {
           "title": "Police Station",
           "icon": "icons/police_station.png",
-          "description": "Is your nearest police station the same as mine?<br><br>Police stations marked on zemljevid.ljubljana.si."
+          "description": "Is your nearest police station the same as mine?<br><br>Police stations marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>."
         }
       ]
     },
@@ -74,7 +74,7 @@
       "name": "Measuring",
       "reward": "Draw 3, Pick 1",
       "color": "#27ae60",
-      "columns": 5,
+      "columns": 4,
       "icon": "icons/measuring.png",
       "format": "Compared to me, are you closer to or further from XYZ? (must include your distance)",
       "valid_answers": ["closer", "further"],
@@ -83,7 +83,7 @@
         {
           "title": "Commercial Airport",
           "icon": "icons/airport.png",
-          "description": "Compared to me, are you closer to or further from the nearest commercial airport?<br><br>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via Google Flights (flights.google.com)."
+          "description": "Compared to me, are you closer to or further from the nearest commercial airport?<br><br>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via <a href=\"flights.google.com>Google Flights</a>."
         },
         {
           "title": "Rail Station",
@@ -93,7 +93,7 @@
         {
           "title": "Četrtna skupnost Border",
           "icon": "icons/cetrtna_skupnost.png",
-          "description": "Compared to me, are you closer to or further from the nearest četrtna skupnost border?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič."
+          "description": "Compared to me, are you closer to or further from the nearest četrtna skupnost border?<br><br><strong>Pick from:</strong> Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. If unclear, use this map: <a href=\"https://commons.wikimedia.org/wiki/File:MOL-CS.png\">wikimedia image</a>."
         },
         {
           "title": "Sea Level",
@@ -113,7 +113,7 @@
         {
           "title": "Forest",
           "icon": "icons/forest.png",
-          "description": "Compared to me, are you closer to or further from the nearest forest?<br><br>Forests marked on zemljevid.ljubljana.si. Being inside of a forest is defined as being zero meters away from it; otherwise the closest border is used."
+          "description": "Compared to me, are you closer to or further from the nearest forest?<br><br>Forests marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>. Being inside of a forest is defined as being zero meters away from it; otherwise the closest border is used."
         },
         {
           "title": "Museum",
@@ -131,7 +131,7 @@
       "name": "Radar",
       "reward": "Draw 2, Pick 1",
       "color": "#e67e22",
-      "columns": 1,
+      "columns": 3,
       "icon": "icons/radar.png",
       "format": "Are you within XYZ of me? (must include your current location)",
       "valid_answers": ["yes", "no"],
@@ -176,7 +176,7 @@
       "name": "Thermometer",
       "reward": "Draw 2, Pick 1",
       "color": "#f1c40f",
-      "columns": 1,
+      "columns": 3,
       "icon": "icons/thermometer.png",
       "format": "After traveling XYZ, am I hotter or colder?",
       "valid_answers": ["hotter", "colder"],
@@ -203,7 +203,7 @@
       "name": "Photo",
       "reward": "Draw 1, Pick 1",
       "color": "#5dade2",
-      "columns": 3,
+      "columns": 4,
       "icon": "icons/photo.png",
       "format": "Send me a photo of XYZ.",
       "valid_answers": ["a photo meeting the full specifications"],
