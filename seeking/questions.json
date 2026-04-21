@@ -113,7 +113,7 @@
         {
           "title": "Forest",
           "icon": "icons/forest.png",
-          "description": "Compared to me, are you closer to or further from the nearest forest?<br><br>Forests marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>. Being inside of a forest is defined as being zero meters away from it; otherwise the closest border is used."
+          "description": "Compared to me, are you closer to or further from the nearest forest?<br><br>Forests marked on <a href=\"https://zemljevid.ljubljana.si\">zemljevid.ljubljana.si</a>. <br><br>Being inside of a forest is defined as being zero meters away from it; otherwise the closest border is used."
         },
         {
           "title": "Museum",
