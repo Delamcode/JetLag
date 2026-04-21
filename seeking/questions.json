@@ -83,7 +83,7 @@
         {
           "title": "Commercial Airport",
           "icon": "icons/airport.png",
-          "description": "Compared to me, are you closer to or further from the nearest commercial airport?<br><br>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via <a href=\"flights.google.com>Google Flights</a>."
+          "description": "Compared to me, are you closer to or further from the nearest commercial airport?<br><br>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via <a href=\"flights.google.com\">Google Flights</a>."
         },
         {
           "title": "Rail Station",
