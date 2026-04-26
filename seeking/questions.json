@@ -270,7 +270,7 @@
         {
           "title":"Trace Any Street/Path(s)",
           "icon":"icons/street.svg",
-          "description":"Send a photo tracing any street or path(s).<br><br>Street/path(s) must be visible on a mapping app. All streets/paths must be continuous. Send north-south oriented. Must be at least 800 meters long. <br><br>This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone’s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker."
+          "description":"Send a photo tracing any street or path(s).<br><br>Street/path(s) must be visible on a mapping app. All streets/paths must be continuous. Send north-south oriented. Must be at least 1 kilometer long. <br><br>This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone’s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker."
         },
         {
           "title":"2 Buildings",
