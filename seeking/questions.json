@@ -156,16 +156,16 @@
       ],
       "questions":[
         {
-          "title":"400m",
-          "label":"400m",
+          "title":"500m",
+          "label":"500m",
           "icon":"icons/radar.svg",
-          "description":"Are you within <strong>400 meters</strong> of me?"
+          "description":"Are you within <strong>500 meters</strong> of me?"
         },
         {
-          "title":"800m",
-          "label":"800m",
+          "title":"1km",
+          "label":"1km",
           "icon":"icons/radar.svg",
-          "description":"Are you within <strong>800 meters</strong> of me?"
+          "description":"Are you within <strong>1 kilometer</strong> of me?"
         },
         {
           "title":"2km",
@@ -206,10 +206,10 @@
       ],
       "questions":[
         {
-          "title":"800m",
-          "label":"800m",
+          "title":"1km",
+          "label":"1km",
           "icon":"icons/thermometer.svg",
-          "description":"After traveling <strong>800 meters</strong>, am I hotter or colder?"
+          "description":"After traveling <strong>1 kilometer</strong>, am I hotter or colder?"
         },
         {
           "title":"5km",
